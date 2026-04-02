@@ -83,26 +83,119 @@
 
 ---
 
-## BLOG — Plan de contenu SEO
-Objectif : attirer du trafic Google gratuit avec des articles que les célibataires recherchent.
+## RECHERCHE DE MOTS-CLÉS — Analyse SEO avril 2026
 
-### Articles à écrire (par priorité SEO) :
-1. "Les 20 meilleures bios Tinder pour homme en 2026"
-2. "Les 15 meilleures bios Tinder pour femme en 2026"
-3. "30 phrases d'accroche Bumble qui marchent vraiment"
-4. "Comment écrire une bio Hinge qui donne envie de matcher"
-5. "Bio Tinder drôle : 25 exemples qui font rire (et matcher)"
-6. "Premières phrases sur Fruitz : comment briser la glace"
-7. "Bio Badoo : comment se démarquer des autres profils"
-8. "Comment aborder quelqu'un sur une app de rencontre sans être bizarre"
-9. "Happn : 10 astuces pour un profil qui attire"
-10. "Pourquoi tu n'as pas de matchs sur Tinder (et comment corriger ça)"
+### Mots-clés principaux (FR) — Volume élevé
+| Mot-clé | Volume estimé | Concurrence | Intention |
+|---------|--------------|-------------|-----------|
+| bio tinder | Très élevé | Forte | Informationnelle → conversion |
+| phrase d'accroche tinder | Très élevé | Forte | Informationnelle → conversion |
+| site de rencontre | Extrêmement élevé | Très forte | Navigation / comparaison |
+| profil tinder | Élevé | Moyenne | Informationnelle |
+| comment draguer sur tinder | Élevé | Moyenne | Informationnelle |
+| phrase d'accroche bumble | Moyen | Faible-moyenne | Informationnelle → conversion |
+| bio bumble | Moyen | Faible-moyenne | Informationnelle → conversion |
+| phrase d'accroche hinge | Moyen (croissant) | Faible | Informationnelle → conversion |
+| plan cul / rencontre sexe | Très élevé | Forte | Transactionnelle (pas notre cible directe) |
+| trouver l'amour en ligne | Moyen | Moyenne | Informationnelle |
+| rencontre en ligne | Très élevé | Très forte | Navigation |
+
+### Mots-clés longue traîne (FR) — Faible concurrence, haute conversion
+| Mot-clé longue traîne | Potentiel | Priorité |
+|------------------------|-----------|----------|
+| bio tinder homme 2026 | Fort | ★★★★★ |
+| bio tinder femme 2026 | Fort | ★★★★★ |
+| exemple bio tinder drôle | Fort | ★★★★★ |
+| meilleure bio tinder 2026 | Fort | ★★★★★ |
+| que mettre dans sa bio tinder | Fort | ★★★★ |
+| comment avoir plus de matchs tinder | Fort | ★★★★ |
+| phrase d'accroche tinder qui marche | Fort | ★★★★ |
+| profil tinder qui attire | Moyen | ★★★★ |
+| phrase d'accroche drôle site de rencontre | Moyen | ★★★★ |
+| comment se démarquer sur bumble | Moyen | ★★★ |
+| bio hinge en français | Faible-moyen | ★★★ |
+| comment briser la glace sur happn | Faible | ★★★ |
+| generateur bio tinder | Moyen | ★★★★★ (direct competitor) |
+| créer un profil de rencontre attractif | Moyen | ★★★★ |
+| comment draguer une fille sur internet | Élevé | ★★★ |
+| premier message site de rencontre | Élevé | ★★★★ |
+| phrases pour draguer sur tinder | Moyen | ★★★★ |
+| bio badoo originale | Faible-moyen | ★★★ |
+| bio fruitz exemple | Faible | ★★ |
+| pick up line en français | Moyen | ★★★★ |
+| rencontre sérieuse en ligne | Moyen | ★★★ |
+| comment aborder quelqu'un en ligne | Moyen | ★★★★ |
+
+### Mots-clés anglais (pour futur site EN)
+| Keyword | Volume (global) | Competition |
+|---------|----------------|-------------|
+| tinder bio | 60 500+/mois | Forte |
+| pick up lines | Très élevé | Forte |
+| best tinder bio | Élevé | Moyenne |
+| bumble bio ideas | Moyen | Moyenne |
+| hinge prompts answers | Moyen-élevé | Moyenne |
+| dating profile tips | Moyen | Moyenne |
+| tinder opening lines | Élevé | Forte |
+| funny dating bio | Moyen | Faible-moyenne |
+
+### Concurrents directs qui se positionnent sur ces mots-clés
+| Site | Mots-clés couverts | Force |
+|------|-------------------|-------|
+| texting-academy.com | bio tinder, phrase d'accroche tinder | Contenu long-form, bien structuré |
+| roast.dating/fr | phrases accroche tinder, bio tinder | Leader, 84k+ clients, version FR |
+| seductionbykamal.com | tinder phrases accroche | Blog SEO agressif |
+| stat-rencontres.fr | generateur bio tinder | Outil gratuit concurrent direct |
+| mariages.net | bio tinder | Autorité de domaine très élevée |
+| dragueurdeparis.com | phrase accroche tinder | Contenu orienté hommes |
+
+---
+
+## BLOG — Plan de contenu SEO (mis à jour avec recherche mots-clés)
+Objectif : attirer du trafic Google gratuit avec des articles optimisés sur les mots-clés à forte conversion.
+
+### PRIORITÉ 1 — Articles à fort volume + forte intention d'achat
+1. "Bio Tinder : 30 exemples pour homme qui font matcher en 2026"
+   → Mots-clés : bio tinder, bio tinder homme 2026, meilleure bio tinder
+2. "Bio Tinder pour femme : 25 exemples irrésistibles (2026)"
+   → Mots-clés : bio tinder femme, exemple bio tinder femme
+3. "50 phrases d'accroche Tinder qui marchent vraiment (testées en 2026)"
+   → Mots-clés : phrase d'accroche tinder, phrases pour draguer sur tinder
+4. "Générateur de bio pour Tinder, Bumble et Hinge — Comment ça marche"
+   → Mots-clés : generateur bio tinder, créer un profil de rencontre
+
+### PRIORITÉ 2 — Articles par application (couvrir chaque niche)
+5. "Phrases d'accroche Bumble : 30 exemples pour qu'elle te réponde"
+   → Mots-clés : phrase d'accroche bumble, bio bumble
+6. "Bio Hinge en français : comment remplir tes prompts pour matcher"
+   → Mots-clés : bio hinge, hinge prompts français
+7. "Bio Badoo : comment se démarquer des milliers de profils"
+   → Mots-clés : bio badoo, bio badoo originale
+8. "Happn : 10 astuces pour un profil qui attire les gens autour de toi"
+   → Mots-clés : profil happn, happn astuces
+
+### PRIORITÉ 3 — Articles à intention informationnelle large (trafic volume)
+9. "Pourquoi tu n'as pas de matchs sur Tinder (et comment corriger ça)"
+   → Mots-clés : pas de match tinder, comment avoir plus de matchs
+10. "Comment aborder quelqu'un sur une app de rencontre sans être bizarre"
+    → Mots-clés : comment aborder, premier message site de rencontre
+11. "Comment draguer sur Internet : le guide complet 2026"
+    → Mots-clés : comment draguer sur internet, draguer en ligne
+12. "Bio Tinder drôle : 25 exemples qui font rire (et matcher)"
+    → Mots-clés : bio tinder drôle, exemple bio tinder drôle
+13. "Pick-up lines en français : 40 phrases d'accroche originales"
+    → Mots-clés : pick up line français, phrases drague originales
+14. "Rencontre sérieuse en ligne : comment créer un profil qui attire les bonnes personnes"
+    → Mots-clés : rencontre sérieuse en ligne, profil rencontre sérieuse
+15. "Premier message sur un site de rencontre : 20 exemples qui donnent envie de répondre"
+    → Mots-clés : premier message site de rencontre, comment envoyer un premier message
 
 ### Format recommandé :
-- 800 à 1500 mots par article
-- Exemples concrets de bios et phrases
-- CTA vers BioParfaite à la fin de chaque article
-- PAS de commentaires publics (voir ci-dessous)
+- 1000 à 2000 mots par article (Google favorise le contenu long et complet en 2026)
+- Exemples concrets de bios et phrases (contenu original, pas du copié-collé)
+- Structure H2/H3 claire pour les featured snippets et AI Overviews
+- CTA vers BioParfaite intégré naturellement (milieu + fin de chaque article)
+- Données chiffrées quand possible (taux de réponse, statistiques)
+- PAS de commentaires publics (risque d'avis négatifs)
 
 ---
 
