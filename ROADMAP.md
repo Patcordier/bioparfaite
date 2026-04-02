@@ -42,6 +42,8 @@
 - [x] Rate limiting sur le formulaire (1 soumission/minute)
 - [x] Honeypot anti-bot sur le formulaire
 - [x] Ignore Bots activé dans N8N
+- [x] Page mentions légales + CGV + politique confidentialité + cookies (mentions-legales.html)
+- [x] Liens footer sur index.html et formulaire.html
 - [x] DNSSEC activé sur OVH
 - [x] HTTPS activé sur GitHub Pages
 - [x] Email pro : "BioParfaite <contact.bioparfaite@gmail.com>" configuré dans N8N (SMTP Gmail, port 587, STARTTLS)
