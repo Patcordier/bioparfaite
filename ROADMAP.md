@@ -2,7 +2,7 @@
 
 ## FAIT
 - [x] Landing page (index.html) — design dark/neon, responsive, mobile-first
-- [x] Formulaire diagnostic (formulaire.html) — 7 questions, navigation étape par étape
+- [x] Formulaire diagnostic (formulaire.html) — 5 questions, navigation étape par étape
 - [x] Branding "BioParfaite.com" appliqué partout
 - [x] Toutes mentions "IA" supprimées, remplacées par "nos experts" / "notre méthode"
 - [x] 6 apps de rencontre intégrées : Tinder, Bumble, Hinge, Happn, Fruitz, Badoo
@@ -15,8 +15,9 @@
 
 ## A FAIRE — Priorité haute
 - [x] Brancher les 2 liens Stripe dans le site
-- [ ] Acheter le domaine bioparfaite.com
-- [ ] Héberger le site (GitHub Pages gratuit ou autre)
+- [x] Acheter le domaine bioparfaite.com (OVH)
+- [x] DNS configuré : 4x A records GitHub + CNAME www → patcordier.github.io
+- [x] Héberger le site sur GitHub Pages (https://patcordier.github.io/bioparfaite/)
 - [x] Brancher le formulaire au webhook N8N
 - [x] S'inscrire sur Anthropic + mettre 10$ + récupérer clé API
 - [x] Configurer le noeud N8N "Message a model" : Anthropic, claude-opus-4-6, prompt HTML
@@ -30,6 +31,18 @@
 - [ ] Version anglophone du site (dupliquer et traduire)
 - [ ] Nom de domaine anglophone (à choisir)
 - [ ] Page de remerciement post-paiement Stripe (redirect après paiement)
+
+## CONCURRENTS A ANALYSER
+- [ ] **DatingZest** (datingzest.com) — Vend des numéros de téléphone pour vérification d'apps de rencontre (Tinder, Hinge, Bumble, Grindr, etc.)
+- [ ] **Roast.dating** (roast.dating) — Leader du marché, retouche de photos IA pour profils de rencontre (84 000+ clients, 2M+ photos)
+
+## A FAIRE — Sécurité
+- [ ] Limite de dépenses mensuelle sur Anthropic (20$)
+- [ ] Ajouter un token secret au webhook N8N (anti-spam)
+- [ ] Rate limiting sur le formulaire (anti-robot)
+- [x] DNSSEC activé sur OVH
+- [x] HTTPS activé sur GitHub Pages
+- [x] Email pro : "BioParfaite <contact.bioparfaite@gmail.com>" configuré dans N8N (SMTP Gmail, port 587, STARTTLS)
 
 ## A FAIRE — Priorité basse / idées futures
 - [ ] Ajouter Google Analytics pour suivre les visites
@@ -48,6 +61,8 @@
 | Extension | .com uniquement | Universel, pas besoin de .fr et .ca |
 | Prix | 9,97$ / 9,97€ | Pricing psychologique (fin en 7) |
 | Mentions IA | Supprimées | Eviter que les clients aillent sur ChatGPT |
+| Hébergement | GitHub Pages (gratuit) | patcordier.github.io/bioparfaite → bioparfaite.com |
+| Registrar domaine | OVH (.com) | WHOIS anonymisé par RGPD |
 | Back-office | Pas nécessaire | Stripe + N8N suffisent, modifications dans le HTML |
 | Ordre formulaire | Facile → clics → texte → email | Maximise le taux de complétion |
 | Taxes Stripe | Pas activées pour l'instant | A activer quand inscrit aux taxes |
@@ -78,7 +93,9 @@ Objectif : attirer du trafic Google gratuit avec des articles que les célibatai
 ---
 
 ## NOTES IMPORTANTES
-- Le formulaire est prêt à être branché sur N8N (webhook commenté dans le code)
-- Les liens Stripe placeholder sont dans index.html lignes ~430-431
+- Repo GitHub : https://github.com/Patcordier/bioparfaite
+- Site live : https://patcordier.github.io/bioparfaite/
+- Clés_privées.txt est protégé par .gitignore (jamais publié sur GitHub)
 - Pour modifier une question du formulaire : ouvrir formulaire.html, changer le texte
 - Pour modifier un prix : changer dans la section PRICING du script (index.html fin de fichier)
+- Pour mettre à jour le site : modifier les fichiers puis git add, commit, push

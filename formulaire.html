@@ -138,6 +138,11 @@
             <!-- FORM -->
             <form id="diagnosticForm" class="card-glow rounded-2xl p-6 sm:p-8">
 
+                <!-- Honeypot anti-bot (invisible) -->
+                <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
                 <!-- STEP 1 : Prénom -->
                 <div class="form-step active" data-step="1">
                     <label class="block text-white font-bold text-lg mb-1">Quel est ton prénom ?</label>
@@ -328,16 +333,33 @@
             })
             .catch(() => {});
 
+        const BP_SECRET = 'bp_sec_2026_xK9mPqLw';
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             if (!validateStep(current)) return;
 
-            const data = Object.fromEntries(new FormData(form));
+            const formData = Object.fromEntries(new FormData(form));
+
+            if (formData.website) return;
+
+            const lastSubmit = localStorage.getItem('bp_last_submit');
+            const now = Date.now();
+            if (lastSubmit && (now - parseInt(lastSubmit)) < 60000) {
+                alert('Merci de patienter une minute avant de soumettre à nouveau.');
+                return;
+            }
+            localStorage.setItem('bp_last_submit', now.toString());
+
+            delete formData.website;
 
             fetch('http://167.114.152.63.nip.io:5678/webhook/8f450325-728a-4a0a-a4be-7f05fc6df450', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-BP-Token': BP_SECRET
+                },
+                body: JSON.stringify(formData)
             }).catch(() => {});
 
             document.getElementById('stripeRedirect').href = stripeLink;
