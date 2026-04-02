@@ -76,6 +76,7 @@
 | Mentions IA | Supprimées | Eviter que les clients aillent sur ChatGPT |
 | Hébergement | GitHub Pages (gratuit) | patcordier.github.io/bioparfaite → bioparfaite.com |
 | Registrar domaine | OVH (.com) | WHOIS anonymisé par RGPD |
+| Entreprise | Patrix Digital (NEQ 2281999708) | Entreprise individuelle, Québec |
 | Back-office | Pas nécessaire | Stripe + N8N suffisent, modifications dans le HTML |
 | Ordre formulaire | Facile → clics → texte → email | Maximise le taux de complétion |
 | Taxes Stripe | Pas activées pour l'instant | A activer quand inscrit aux taxes |
