@@ -517,13 +517,22 @@
         });
     }
 
+    function resetChat() {
+        const extra = chatMessages.querySelectorAll('.chat-extra');
+        extra.forEach(el => el.remove());
+        chatQuestions.style.display = 'flex';
+        renderQuestions();
+    }
+
     function showAnswer(i) {
         const faq = faqData[i];
         const qDiv = document.createElement('div');
+        qDiv.className = 'chat-extra';
         qDiv.style.cssText = 'background:rgba(184,41,221,0.15);border-radius:12px;padding:10px 14px;color:#fff;font-size:13px;align-self:flex-end;max-width:85%;line-height:1.4;';
         qDiv.textContent = faq.q;
 
         const aDiv = document.createElement('div');
+        aDiv.className = 'chat-extra';
         aDiv.style.cssText = 'background:rgba(255,45,120,0.1);border-radius:12px;padding:12px 16px;color:#e0e0e0;font-size:13px;line-height:1.6;max-width:90%;';
         aDiv.innerHTML = faq.a;
 
@@ -533,17 +542,12 @@
         chatMessages.appendChild(aDiv);
 
         const backBtn = document.createElement('button');
+        backBtn.className = 'chat-extra';
         backBtn.innerHTML = '&#8592; Autres questions';
         backBtn.style.cssText = 'background:none;border:1px solid rgba(255,45,120,0.3);border-radius:8px;padding:8px 14px;color:#ff2d78;font-size:12px;cursor:pointer;align-self:flex-start;margin-top:4px;transition:all 0.2s;';
         backBtn.onmouseenter = () => { backBtn.style.background = 'rgba(255,45,120,0.1)'; };
         backBtn.onmouseleave = () => { backBtn.style.background = 'none'; };
-        backBtn.onclick = () => {
-            chatMessages.querySelectorAll('div:not(:first-child), button').forEach(el => {
-                if (el !== chatQuestions) el.remove();
-            });
-            chatQuestions.style.display = 'flex';
-            chatMessages.scrollTop = 0;
-        };
+        backBtn.onclick = () => resetChat();
         chatMessages.appendChild(backBtn);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -553,6 +557,7 @@
         const isOpen = w.style.display === 'flex';
         w.style.display = isOpen ? 'none' : 'flex';
         document.getElementById('chatToggle').style.display = isOpen ? 'flex' : 'none';
+        if (!isOpen) resetChat();
     }
 
     renderQuestions();
