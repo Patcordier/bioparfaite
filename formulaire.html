@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioParfaite — Diagnostic de ton profil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: { pink: '#ff2d78', purple: '#b829dd', blue: '#00d4ff' },
+                        dark: { 900: '#0a0a0f', 800: '#12121a', 700: '#1a1a2e', 600: '#252540' }
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0a0a0f; }
+        .gradient-text {
+            background: linear-gradient(135deg, #ff2d78, #b829dd, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, #ff2d78, #b829dd);
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #ff4590, #c940ee);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 45, 120, 0.4), 0 0 60px rgba(184, 41, 221, 0.2);
+        }
+        .cta-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .card-glow {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+        .form-input {
+            background: rgba(26, 26, 46, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: rgba(255, 45, 120, 0.5);
+            box-shadow: 0 0 0 3px rgba(255, 45, 120, 0.1);
+            outline: none;
+        }
+        .form-input::placeholder { color: rgba(255, 255, 255, 0.2); }
+
+        .radio-card {
+            background: rgba(26, 26, 46, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .radio-card:hover { border-color: rgba(255, 45, 120, 0.3); }
+        .radio-card.selected {
+            border-color: #ff2d78;
+            background: rgba(255, 45, 120, 0.08);
+            box-shadow: 0 0 20px rgba(255, 45, 120, 0.1);
+        }
+        .radio-card.selected .radio-dot {
+            background: linear-gradient(135deg, #ff2d78, #b829dd);
+            box-shadow: 0 0 10px rgba(255, 45, 120, 0.4);
+        }
+
+        .step-indicator { transition: all 0.5s ease; }
+        .step-indicator.active {
+            background: linear-gradient(135deg, #ff2d78, #b829dd);
+            box-shadow: 0 0 15px rgba(255, 45, 120, 0.3);
+        }
+        .step-indicator.done { background: #22c55e; }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #ff2d78, #b829dd);
+            transition: width 0.5s ease;
+        }
+
+        .form-step {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .form-step.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-200 antialiased min-h-screen">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tight">
+                <span class="gradient-text">BioParfaite</span><span class="text-white/60">.com</span>
+            </a>
+            <span class="text-xs text-gray-500 hidden sm:block">Diagnostic de ton profil</span>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16 px-4">
+        <div class="max-w-xl mx-auto">
+
+            <!-- HEADER -->
+            <div class="text-center mb-10">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+                    Diagnostic <span class="gradient-text">Profil Dating</span>
+                </h1>
+                <p class="text-gray-400 text-sm">Réponds à ces questions pour qu'on crée tes bios et phrases d'accroche sur-mesure.</p>
+            </div>
+
+            <!-- PROGRESS BAR -->
+            <div class="mb-8">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs text-gray-500">Question <span id="currentStep">1</span>/5</span>
+                    <span class="text-xs text-gray-500"><span id="progressPercent">0</span>% complété</span>
+                </div>
+                <div class="w-full h-1.5 bg-dark-700 rounded-full overflow-hidden">
+                    <div id="progressBar" class="progress-fill h-full rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <form id="diagnosticForm" class="card-glow rounded-2xl p-6 sm:p-8">
+
+                <!-- STEP 1 : Prénom -->
+                <div class="form-step active" data-step="1">
+                    <label class="block text-white font-bold text-lg mb-1">Quel est ton prénom ?</label>
+                    <p class="text-gray-500 text-sm mb-5">Pour qu'on personnalise tes résultats.</p>
+                    <input type="text" name="prenom" required placeholder="Ex: Thomas"
+                           class="form-input w-full rounded-xl px-5 py-4 text-white text-base">
+                </div>
+
+                <!-- STEP 2 : Pays -->
+                <div class="form-step" data-step="2">
+                    <label class="block text-white font-bold text-lg mb-1">Dans quel pays ou région habites-tu ?</label>
+                    <p class="text-gray-500 text-sm mb-5">On adapte le ton et les références culturelles.</p>
+                    <input type="text" name="pays" required placeholder="Ex: France, Québec, Belgique..."
+                           class="form-input w-full rounded-xl px-5 py-4 text-white text-base">
+                </div>
+
+                <!-- STEP 3 : Bio actuelle -->
+                <div class="form-step" data-step="3">
+                    <label class="block text-white font-bold text-lg mb-1">Ta bio actuelle</label>
+                    <p class="text-gray-500 text-sm mb-5">Copie-colle ta bio ici, ou décris-toi en 2-3 phrases si tu n'en as pas.</p>
+                    <textarea name="bio_actuelle" required rows="5" placeholder="Ex: J'aime les voyages, le café et les conversations qui durent jusqu'à 3h du mat..."
+                              class="form-input w-full rounded-xl px-5 py-4 text-white text-base resize-none"></textarea>
+                </div>
+
+                <!-- STEP 4 : Passions -->
+                <div class="form-step" data-step="4">
+                    <label class="block text-white font-bold text-lg mb-1">Tes passions et traits de caractère</label>
+                    <p class="text-gray-500 text-sm mb-5">Donne-nous 2 ou 3 éléments clés pour personnaliser tes résultats.</p>
+                    <input type="text" name="passions" required placeholder="Ex: fan de rando, humour sarcastique, accro au café"
+                           class="form-input w-full rounded-xl px-5 py-4 text-white text-base">
+                </div>
+
+                <!-- STEP 5 : Email -->
+                <div class="form-step" data-step="5">
+                    <label class="block text-white font-bold text-lg mb-1">Ton adresse email</label>
+                    <p class="text-gray-500 text-sm mb-5">C'est là qu'on t'enverra tes 5 bios + 10 phrases d'accroche.</p>
+                    <input type="email" name="email" required placeholder="ton@email.com"
+                           class="form-input w-full rounded-xl px-5 py-4 text-white text-base">
+                    <p class="text-xs text-gray-600 mt-3 flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        On ne partage jamais ton email. Zéro spam.
+                    </p>
+                </div>
+
+                <!-- NAVIGATION -->
+                <div class="flex items-center justify-between mt-8 pt-6 border-t border-white/5">
+                    <button type="button" id="btnPrev"
+                            class="text-gray-500 hover:text-white text-sm font-semibold transition-colors hidden flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                        Retour
+                    </button>
+                    <div class="flex-1"></div>
+                    <button type="button" id="btnNext"
+                            class="cta-btn text-white font-bold px-8 py-3 rounded-full text-sm flex items-center gap-2">
+                        Suivant
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                    <button type="submit" id="btnSubmit"
+                            class="cta-btn text-white font-bold px-8 py-3 rounded-full text-sm hidden flex items-center gap-2">
+                        Recevoir mes bios
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    </button>
+                </div>
+            </form>
+
+            <!-- CONFIRMATION (hidden by default) -->
+            <div id="confirmation" class="card-glow rounded-2xl p-8 sm:p-10 text-center hidden">
+                <div class="text-5xl mb-5">🎉</div>
+                <h2 class="text-2xl font-extrabold text-white mb-3">Parfait ! Plus qu'une étape.</h2>
+                <p class="text-gray-400 mb-6">Tes réponses sont enregistrées. Clique ci-dessous pour finaliser ta commande et recevoir tes <span class="text-white font-semibold">5 bios + 10 phrases d'accroche</span> par email.</p>
+                <a href="#" id="stripeRedirect" target="_blank"
+                   class="cta-btn inline-block text-white text-lg font-bold px-10 py-4 rounded-full mb-4">
+                    Finaliser le paiement
+                </a>
+                <p class="text-xs text-gray-600 flex items-center justify-center gap-1.5 mt-3">
+                    <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    Paiement sécurisé par Stripe
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-6 px-4">
+        <div class="max-w-6xl mx-auto text-center text-xs text-gray-600">
+            <p>&copy; 2026 <span class="gradient-text font-semibold">BioParfaite.com</span> — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('diagnosticForm');
+        const steps = form.querySelectorAll('.form-step');
+        const btnNext = document.getElementById('btnNext');
+        const btnPrev = document.getElementById('btnPrev');
+        const btnSubmit = document.getElementById('btnSubmit');
+        const progressBar = document.getElementById('progressBar');
+        const currentStepEl = document.getElementById('currentStep');
+        const progressPercent = document.getElementById('progressPercent');
+        const totalSteps = steps.length;
+        let current = 1;
+
+        function goToStep(n) {
+            current = n;
+            steps.forEach(s => s.classList.remove('active'));
+            form.querySelector(`[data-step="${n}"]`).classList.add('active');
+
+            btnPrev.classList.toggle('hidden', n === 1);
+            btnNext.classList.toggle('hidden', n === totalSteps);
+            btnSubmit.classList.toggle('hidden', n !== totalSteps);
+
+            const pct = Math.round(((n - 1) / totalSteps) * 100);
+            progressBar.style.width = pct + '%';
+            currentStepEl.textContent = n;
+            progressPercent.textContent = pct;
+
+            const firstInput = form.querySelector(`[data-step="${n}"] input, [data-step="${n}"] textarea`);
+            if (firstInput && firstInput.type !== 'radio') firstInput.focus();
+        }
+
+        function validateStep(n) {
+            const stepEl = form.querySelector(`[data-step="${n}"]`);
+            const inputs = stepEl.querySelectorAll('input[required], textarea[required]');
+            for (const input of inputs) {
+                if (input.type === 'radio') {
+                    const radios = stepEl.querySelectorAll(`input[name="${input.name}"]`);
+                    const checked = Array.from(radios).some(r => r.checked);
+                    if (!checked) {
+                        stepEl.querySelector('.radio-card').style.borderColor = 'rgba(255, 45, 120, 0.6)';
+                        setTimeout(() => stepEl.querySelector('.radio-card').style.borderColor = '', 2000);
+                        return false;
+                    }
+                } else {
+                    if (!input.value.trim()) {
+                        input.style.borderColor = 'rgba(255, 45, 120, 0.6)';
+                        input.focus();
+                        setTimeout(() => input.style.borderColor = '', 2000);
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        btnNext.addEventListener('click', () => {
+            if (validateStep(current) && current < totalSteps) goToStep(current + 1);
+        });
+
+        btnPrev.addEventListener('click', () => {
+            if (current > 1) goToStep(current - 1);
+        });
+
+        document.querySelectorAll('.radio-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const name = card.querySelector('input[type="radio"]').name;
+                document.querySelectorAll(`input[name="${name}"]`).forEach(r => r.closest('.radio-card').classList.remove('selected'));
+                card.classList.add('selected');
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+                if (current < totalSteps) btnNext.click();
+                else btnSubmit.click();
+            }
+        });
+
+        const STRIPE_LINKS = {
+            CAD: 'https://buy.stripe.com/6oU8wPg59gfZgJpc4d8bS02',
+            EUR: 'https://buy.stripe.com/14A8wPaKP6Fpal1fgp8bS01'
+        };
+
+        const EUR_COUNTRIES = [
+            'FR','BE','CH','LU','MC','DE','AT','ES','IT','PT','NL',
+            'IE','FI','GR','SK','SI','EE','LV','LT','MT','CY',
+            'BG','RO','HR','HU','CZ','PL','SE','DK','SN','CI',
+            'ML','BF','TG','BJ','NE','GA','CG','CD','CM','MA',
+            'TN','DZ','MG','MU','RE','GP','MQ','GF','YT','NC','PF'
+        ];
+
+        let stripeLink = localStorage.getItem('bioparfaite_stripe_link') || STRIPE_LINKS.CAD;
+
+        fetch('https://ipapi.co/json/')
+            .then(r => r.json())
+            .then(data => {
+                stripeLink = EUR_COUNTRIES.includes(data.country_code) ? STRIPE_LINKS.EUR : STRIPE_LINKS.CAD;
+            })
+            .catch(() => {});
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!validateStep(current)) return;
+
+            const data = Object.fromEntries(new FormData(form));
+
+            fetch('http://167.114.152.63.nip.io:5678/webhook/8f450325-728a-4a0a-a4be-7f05fc6df450', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).catch(() => {});
+
+            document.getElementById('stripeRedirect').href = stripeLink;
+
+            form.classList.add('hidden');
+            document.getElementById('confirmation').classList.remove('hidden');
+
+            progressBar.style.width = '100%';
+            progressPercent.textContent = '100';
+        });
+    </script>
+
+</body>
+</html>
