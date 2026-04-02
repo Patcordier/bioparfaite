@@ -38,8 +38,10 @@
 
 ## A FAIRE — Sécurité
 - [ ] Limite de dépenses mensuelle sur Anthropic (20$)
-- [ ] Ajouter un token secret au webhook N8N (anti-spam)
-- [ ] Rate limiting sur le formulaire (anti-robot)
+- [x] Token secret webhook N8N (Header Auth X-BP-Token)
+- [x] Rate limiting sur le formulaire (1 soumission/minute)
+- [x] Honeypot anti-bot sur le formulaire
+- [x] Ignore Bots activé dans N8N
 - [x] DNSSEC activé sur OVH
 - [x] HTTPS activé sur GitHub Pages
 - [x] Email pro : "BioParfaite <contact.bioparfaite@gmail.com>" configuré dans N8N (SMTP Gmail, port 587, STARTTLS)

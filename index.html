@@ -465,5 +465,98 @@
             });
     </script>
 
+    <!-- CHATBOT FAQ -->
+    <div id="chatbot" style="position:fixed;bottom:24px;right:24px;z-index:9999;font-family:Inter,system-ui,sans-serif;">
+        <div id="chatWindow" style="display:none;width:360px;max-width:calc(100vw - 32px);max-height:520px;background:#12121a;border:1px solid rgba(255,255,255,0.08);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.5);overflow:hidden;flex-direction:column;" >
+            <div style="background:linear-gradient(135deg,#ff2d78,#b829dd);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;">
+                <div>
+                    <div style="color:#fff;font-weight:700;font-size:15px;">BioParfaite</div>
+                    <div style="color:rgba(255,255,255,0.8);font-size:12px;">Une question ? On a la réponse.</div>
+                </div>
+                <button onclick="toggleChat()" style="background:none;border:none;color:#fff;font-size:20px;cursor:pointer;padding:4px;">&#x2715;</button>
+            </div>
+            <div id="chatMessages" style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;max-height:400px;">
+                <div style="background:rgba(255,45,120,0.1);border-radius:12px;padding:12px 16px;color:#e0e0e0;font-size:13px;line-height:1.5;">
+                    Salut ! 👋 Choisis une question ci-dessous et j'y réponds instantanément.
+                </div>
+                <div id="chatQuestions" style="display:flex;flex-direction:column;gap:6px;"></div>
+            </div>
+        </div>
+        <button id="chatToggle" onclick="toggleChat()" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ff2d78,#b829dd);border:none;cursor:pointer;box-shadow:0 4px 20px rgba(255,45,120,0.4);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-top:12px;transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 30px rgba(255,45,120,0.5)'" onmouseleave="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(255,45,120,0.4)'">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </button>
+    </div>
+
+    <script>
+    const faqData = [
+        {q: "C'est quoi BioParfaite ?", a: "BioParfaite, c'est un service qui crée pour toi <strong>5 bios uniques</strong> et <strong>10 phrases d'accroche percutantes</strong> adaptées à ton style et ta personnalité, pour tes applis de rencontre (Tinder, Bumble, Hinge, Happn, Fruitz, Badoo)."},
+        {q: "Comment ça marche ?", a: "C'est simple : <strong>1)</strong> Tu remplis un court formulaire sur ton profil. <strong>2)</strong> Nos experts analysent tes réponses. <strong>3)</strong> Tu reçois tes bios + phrases d'accroche par email. Le tout en quelques minutes !"},
+        {q: "Combien ça coûte ?", a: "Le tarif est de <strong>9,97$&nbsp;CAD</strong> (ou <strong>9,97€</strong> en Europe). C'est un paiement unique, pas un abonnement. Tu reçois tout par email."},
+        {q: "Combien de temps pour recevoir mes résultats ?", a: "En général, tu reçois tes 5 bios + 10 phrases d'accroche par email <strong>dans les minutes</strong> qui suivent ton paiement. C'est quasi-instantané."},
+        {q: "Pourquoi payer ? ChatGPT peut le faire non ?", a: "ChatGPT donne des réponses génériques. BioParfaite utilise une <strong>méthode éprouvée</strong>, une base de données de phrases qui marchent vraiment, et un prompt optimisé par des experts en séduction. Le résultat est <strong>personnalisé, varié (5 styles différents)</strong> et prêt à copier-coller."},
+        {q: "Est-ce que ça marche vraiment ?", a: "Oui ! Une bio bien rédigée peut <strong>tripler tes matchs</strong>. La plupart des profils ont des bios ennuyeuses ou vides. Se démarquer avec une bio originale et une phrase d'accroche percutante, c'est la clé pour matcher plus."},
+        {q: "Mes données sont protégées ?", a: "Absolument. Ton email et tes réponses sont utilisés <strong>uniquement</strong> pour créer tes bios. On ne partage rien avec personne. Zéro spam, zéro revente de données. Paiement sécurisé par <strong>Stripe</strong>."},
+        {q: "Quelles applis sont supportées ?", a: "Nos bios et phrases fonctionnent sur <strong>toutes</strong> les applis : Tinder, Bumble, Hinge, Happn, Fruitz, Badoo, et n'importe quelle autre appli de rencontre."},
+        {q: "Ma bio sera unique ou c'est du copié-collé ?", a: "Chaque bio est <strong>100% unique</strong>, générée sur-mesure à partir de tes réponses. Tu reçois 5 bios dans 5 styles différents (humour, confiant, mystérieux, sincère, original). Personne d'autre n'aura la même."},
+        {q: "Je peux avoir un remboursement ?", a: "Si tu n'es pas satisfait du résultat, contacte-nous à <strong>contact.bioparfaite@gmail.com</strong> et on trouvera une solution ensemble."}
+    ];
+
+    const chatQuestions = document.getElementById('chatQuestions');
+    const chatMessages = document.getElementById('chatMessages');
+
+    function renderQuestions() {
+        chatQuestions.innerHTML = '';
+        faqData.forEach((faq, i) => {
+            const btn = document.createElement('button');
+            btn.textContent = faq.q;
+            btn.style.cssText = 'background:rgba(26,26,46,0.8);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:10px 14px;color:#ccc;font-size:13px;text-align:left;cursor:pointer;transition:all 0.2s;line-height:1.4;';
+            btn.onmouseenter = () => { btn.style.borderColor = 'rgba(255,45,120,0.4)'; btn.style.color = '#fff'; };
+            btn.onmouseleave = () => { btn.style.borderColor = 'rgba(255,255,255,0.08)'; btn.style.color = '#ccc'; };
+            btn.onclick = () => showAnswer(i);
+            chatQuestions.appendChild(btn);
+        });
+    }
+
+    function showAnswer(i) {
+        const faq = faqData[i];
+        const qDiv = document.createElement('div');
+        qDiv.style.cssText = 'background:rgba(184,41,221,0.15);border-radius:12px;padding:10px 14px;color:#fff;font-size:13px;align-self:flex-end;max-width:85%;line-height:1.4;';
+        qDiv.textContent = faq.q;
+
+        const aDiv = document.createElement('div');
+        aDiv.style.cssText = 'background:rgba(255,45,120,0.1);border-radius:12px;padding:12px 16px;color:#e0e0e0;font-size:13px;line-height:1.6;max-width:90%;';
+        aDiv.innerHTML = faq.a;
+
+        chatQuestions.style.display = 'none';
+
+        chatMessages.appendChild(qDiv);
+        chatMessages.appendChild(aDiv);
+
+        const backBtn = document.createElement('button');
+        backBtn.innerHTML = '&#8592; Autres questions';
+        backBtn.style.cssText = 'background:none;border:1px solid rgba(255,45,120,0.3);border-radius:8px;padding:8px 14px;color:#ff2d78;font-size:12px;cursor:pointer;align-self:flex-start;margin-top:4px;transition:all 0.2s;';
+        backBtn.onmouseenter = () => { backBtn.style.background = 'rgba(255,45,120,0.1)'; };
+        backBtn.onmouseleave = () => { backBtn.style.background = 'none'; };
+        backBtn.onclick = () => {
+            chatMessages.querySelectorAll('div:not(:first-child), button').forEach(el => {
+                if (el !== chatQuestions) el.remove();
+            });
+            chatQuestions.style.display = 'flex';
+            chatMessages.scrollTop = 0;
+        };
+        chatMessages.appendChild(backBtn);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function toggleChat() {
+        const w = document.getElementById('chatWindow');
+        const isOpen = w.style.display === 'flex';
+        w.style.display = isOpen ? 'none' : 'flex';
+        document.getElementById('chatToggle').style.display = isOpen ? 'flex' : 'none';
+    }
+
+    renderQuestions();
+    </script>
+
 </body>
 </html>
