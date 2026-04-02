@@ -1,0 +1,28 @@
+[
+    {
+        "date": "2026-04-09",
+        "draft": "drafts/blog-bio-tinder-femme.html",
+        "target": "blog-bio-tinder-femme.html",
+        "card_id": "bio-tinder-femme",
+        "card_label": "Guide \u2022 Tinder",
+        "card_emoji": "\ud83d\udc69",
+        "card_title": "Bio Tinder Femme : 25 Exemples Irr\u00e9sistibles",
+        "card_desc": "25 bios class\u00e9es par style. P\u00e9tillante, confiante, myst\u00e9rieuse, dr\u00f4le, sinc\u00e8re.",
+        "card_gradient": "rgba(0,212,255,0.15), rgba(255,45,120,0.15)",
+        "card_color_class": "text-neon-blue",
+        "published": true
+    },
+    {
+        "date": "2026-04-16",
+        "draft": "drafts/blog-50-phrases-accroche-tinder.html",
+        "target": "blog-50-phrases-accroche-tinder.html",
+        "card_id": "50-phrases-accroche",
+        "card_label": "Guide \u2022 Tinder",
+        "card_emoji": "\ud83d\udcac",
+        "card_title": "50 Phrases d'Accroche Tinder Qui Marchent",
+        "card_desc": "Les meilleures phrases pour lancer la conversation.",
+        "card_gradient": "rgba(184,41,221,0.15), rgba(0,212,255,0.15)",
+        "card_color_class": "text-neon-purple",
+        "published": false
+    }
+]
