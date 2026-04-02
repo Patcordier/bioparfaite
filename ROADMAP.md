@@ -46,6 +46,15 @@
 - [x] HTTPS activé sur GitHub Pages
 - [x] Email pro : "BioParfaite <contact.bioparfaite@gmail.com>" configuré dans N8N (SMTP Gmail, port 587, STARTTLS)
 
+## PHASE 2 — Offre Premium "Analyse de Profil"
+- [ ] Concept : le client upload un screenshot du profil qui l'intéresse → IA analyse photo+bio → phrases d'accroche ultra-personnalisées
+- [ ] Pack 3 profils : 14,97$ CAD / 14,97€
+- [ ] Pack 10 profils : 29,97$ CAD / 29,97€
+- [ ] Nouveau formulaire avec upload d'image
+- [ ] Nouveau workflow N8N avec Claude Vision
+- [ ] Nouveaux produits Stripe
+- [ ] Coût API estimé : ~0,08-0,10$ par analyse (vision)
+
 ## A FAIRE — Priorité basse / idées futures
 - [ ] Ajouter Google Analytics pour suivre les visites
 - [ ] Créer des codes promo Stripe pour campagnes marketing
