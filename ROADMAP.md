@@ -12,32 +12,16 @@
 - [x] Produits Stripe créés (BioParfaite CAD + BioParfaite EUR)
 - [x] SEO : title + meta description optimisés à chaque modification
 - [x] Ordre du formulaire optimisé pour la conversion (facile → difficile → email)
-
-## A FAIRE — Priorité haute
 - [x] Brancher les 2 liens Stripe dans le site
 - [x] Acheter le domaine bioparfaite.com (OVH)
 - [x] DNS configuré : 4x A records GitHub + CNAME www → patcordier.github.io
-- [x] Héberger le site sur GitHub Pages (https://patcordier.github.io/bioparfaite/)
+- [x] Héberger le site sur GitHub Pages
 - [x] Brancher le formulaire au webhook N8N
-- [x] S'inscrire sur Anthropic + mettre 10$ + récupérer clé API
+- [x] S'inscrire sur Anthropic + récupérer clé API
 - [x] Configurer le noeud N8N "Message a model" : Anthropic, claude-opus-4-6, prompt HTML
 - [x] Prompt Claude rédigé et sauvegardé (voir PROMPT_CLAUDE.md v3)
 - [x] Configurer le noeud N8N "Send email" : template HTML aux couleurs du site
 - [x] Tester le parcours complet : formulaire → N8N → Claude → email client (~0,04$ par génération)
-
-## A FAIRE — Priorité moyenne
-- [ ] Branding Stripe : ajouter logo BioParfaite + couleur accent #ff2d78 (Paramètres > Profil Stripe > Branding)
-- [ ] Blog / articles SEO (voir section "Blog" ci-dessous)
-- [ ] Version anglophone du site (dupliquer et traduire)
-- [ ] Nom de domaine anglophone (à choisir)
-- [ ] Page de remerciement post-paiement Stripe (redirect après paiement)
-
-## CONCURRENTS A ANALYSER
-- [ ] **DatingZest** (datingzest.com) — Vend des numéros de téléphone pour vérification d'apps de rencontre (Tinder, Hinge, Bumble, Grindr, etc.)
-- [ ] **Roast.dating** (roast.dating) — Leader du marché, retouche de photos IA pour profils de rencontre (84 000+ clients, 2M+ photos)
-
-## A FAIRE — Sécurité
-- [ ] Limite de dépenses mensuelle sur Anthropic (20$)
 - [x] Token secret webhook N8N (Header Auth X-BP-Token)
 - [x] Rate limiting sur le formulaire (1 soumission/minute)
 - [x] Honeypot anti-bot sur le formulaire
@@ -45,8 +29,31 @@
 - [x] Page mentions légales + CGV + politique confidentialité + cookies (mentions-legales.html)
 - [x] Liens footer sur index.html et formulaire.html
 - [x] DNSSEC activé sur OVH
-- [x] HTTPS activé sur GitHub Pages
+- [x] HTTPS activé sur GitHub Pages (Enforce HTTPS coché)
 - [x] Email pro : "BioParfaite <contact.bioparfaite@gmail.com>" configuré dans N8N (SMTP Gmail, port 587, STARTTLS)
+- [x] Limite de dépenses mensuelle sur Anthropic (20$)
+- [x] Chatbot FAQ interactive (10 questions, widget flottant)
+- [x] Immatriculation NEQ : Patrix Digital (2281999708)
+- [x] Mentions légales mises à jour avec NEQ
+- [x] Google Search Console : propriété vérifiée + sitemap soumis (4 pages indexées)
+- [x] SEO avancé : sitemap.xml, robots.txt, Schema.org JSON-LD, Open Graph, canonical, hreflang
+- [x] Article blog #1 : "Bio Tinder Homme : 30 Exemples" (avec images, blur paywall, CTA)
+- [x] Section Blog ajoutée sur page d'accueil (3 cartes dont 2 "Bientôt")
+- [x] Fichier comptabilité Excel (Comptabilite_Patrix_Digital.xlsx)
+
+## A FAIRE — Priorité moyenne
+- [ ] Branding Stripe : ajouter logo BioParfaite + couleur accent (Paramètres > Profil Stripe > Branding)
+- [ ] Articles blog #2 à #4 (voir calendrier de publication ci-dessous)
+- [ ] Version anglophone du site (dupliquer et traduire)
+- [ ] Nom de domaine anglophone (à choisir)
+- [ ] Page de remerciement post-paiement Stripe (redirect après paiement)
+- [ ] Google Analytics pour suivre les visites
+
+## CONCURRENTS ANALYSÉS
+- [x] **Roast.dating** — Leader, traduit de l'anglais, CTA agressif, 84k+ clients
+- [x] **Texting Academy** — Bon contenu long-form, ton "coach séduction"
+- [x] **stat-rencontres.fr** — Générateur bio gratuit basique, site brouillon
+- [ ] **DatingZest** — Vend des numéros de téléphone pour vérification d'apps
 
 ## PHASE 2 — Offre Premium "Analyse de Profil"
 - [ ] Concept : le client upload un screenshot du profil qui l'intéresse → IA analyse photo+bio → phrases d'accroche ultra-personnalisées
@@ -58,11 +65,9 @@
 - [ ] Coût API estimé : ~0,08-0,10$ par analyse (vision)
 
 ## A FAIRE — Priorité basse / idées futures
-- [ ] Ajouter Google Analytics pour suivre les visites
 - [ ] Créer des codes promo Stripe pour campagnes marketing
 - [ ] Témoignages réels (remplacer les fictifs quand tu auras de vrais clients)
 - [ ] Tester d'autres prix (A/B testing)
-- [ ] Ajouter un chatbot ou FAQ interactive
 - [ ] Version premium (plus de bios, coaching profil complet)
 
 ---
@@ -189,11 +194,26 @@ Objectif : attirer du trafic Google gratuit avec des articles optimisés sur les
 15. "Premier message sur un site de rencontre : 20 exemples qui donnent envie de répondre"
     → Mots-clés : premier message site de rencontre, comment envoyer un premier message
 
+### Calendrier de publication (1 article / semaine)
+| Semaine | Date cible | Article | Statut |
+|---------|-----------|---------|--------|
+| S1 | 2 avril 2026 | Bio Tinder Homme : 30 exemples | ✅ Publié |
+| S2 | 9 avril 2026 | Bio Tinder Femme : 25 exemples irrésistibles | Prêt à publier |
+| S3 | 16 avril 2026 | 50 phrases d'accroche Tinder qui marchent | À écrire |
+| S4 | 23 avril 2026 | Générateur de bio : comment ça marche | À écrire |
+| S5 | 30 avril 2026 | Phrases d'accroche Bumble : 30 exemples | À écrire |
+| S6 | 7 mai 2026 | Bio Hinge en français | À écrire |
+| S7 | 14 mai 2026 | Pourquoi tu n'as pas de matchs sur Tinder | À écrire |
+| S8 | 21 mai 2026 | Comment aborder quelqu'un en ligne | À écrire |
+
+Rythme recommandé : **1 article par semaine** = Google voit que le site est actif, sans surcharger.
+
 ### Format recommandé :
 - 1000 à 2000 mots par article (Google favorise le contenu long et complet en 2026)
 - Exemples concrets de bios et phrases (contenu original, pas du copié-collé)
 - Structure H2/H3 claire pour les featured snippets et AI Overviews
 - CTA vers BioParfaite intégré naturellement (milieu + fin de chaque article)
+- 3 exemples gratuits par style + blur sur le reste (conversion)
 - Données chiffrées quand possible (taux de réponse, statistiques)
 - PAS de commentaires publics (risque d'avis négatifs)
 
