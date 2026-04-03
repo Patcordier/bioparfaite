@@ -83,14 +83,16 @@
 
 ## OUTILS GRATUITS À UTILISER
 
-| Outil | Usage |
-|---|---|
-| Google Search Console | Suivi indexation, clics, position |
-| Bing Webmaster Tools | Indexation Bing/Yahoo/DuckDuckGo |
-| Google PageSpeed Insights | Performance, Core Web Vitals |
-| Schema Markup Validator | Vérifier les données structurées |
-| Facebook Sharing Debugger | Tester les previews de partage |
-| Moz Link Explorer (gratuit) | Vérifier Domain Authority |
+| Outil | URL | Usage |
+|---|---|---|
+| Google Search Console | search.google.com/search-console | Suivi indexation, clics, position |
+| Bing Webmaster Tools | bing.com/webmasters | Indexation Bing/Yahoo/DuckDuckGo |
+| Google PageSpeed Insights | pagespeed.web.dev | Performance, Core Web Vitals (note /100) |
+| SerpNap SEO Checker | serpnap.com/tools/seo-checker | Audit SEO complet, note A+ à F, rapport PDF |
+| RankMachine | rankmachine.io | Scan 200+ facteurs SEO en 30 sec, gratuit |
+| Schema Markup Validator | validator.schema.org | Vérifier les données structurées |
+| Facebook Sharing Debugger | developers.facebook.com/tools/debug | Tester les previews de partage |
+| Moz Link Explorer | moz.com/link-explorer | Vérifier Domain Authority |
 
 ---
 
