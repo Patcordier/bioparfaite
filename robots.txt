@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /ROADMAP.md
 Disallow: /PROMPT_CLAUDE.md
+Disallow: /drafts/
 
 Sitemap: https://bioparfaite.com/sitemap.xml
