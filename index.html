@@ -188,7 +188,8 @@
     <link rel="dns-prefetch" href="https://ipapi.co">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
     <style>
         body { background-color: #0a0a0f; }
 
@@ -602,14 +603,14 @@
     </main>
 
     <footer class="border-t border-white/5 py-8 px-4">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
             <p>&copy; 2026 <span class="gradient-text font-semibold">BioParfaite.com</span> — Tous droits réservés.</p>
             <div class="flex gap-6">
-                <a href="blog-bio-tinder-homme.html" class="hover:text-gray-400 transition-colors">Blog</a>
-                <a href="mentions-legales.html" class="hover:text-gray-400 transition-colors">Mentions légales</a>
-                <a href="mentions-legales.html#confidentialite" class="hover:text-gray-400 transition-colors">Confidentialité</a>
-                <a href="mentions-legales.html#cgv" class="hover:text-gray-400 transition-colors">CGV</a>
-                <a href="mailto:contact.bioparfaite@gmail.com" class="hover:text-gray-400 transition-colors">Contact</a>
+                <a href="blog-bio-tinder-homme.html" class="hover:text-gray-200 transition-colors">Blog</a>
+                <a href="mentions-legales.html" class="hover:text-gray-200 transition-colors">Mentions légales</a>
+                <a href="mentions-legales.html#confidentialite" class="hover:text-gray-200 transition-colors">Confidentialité</a>
+                <a href="mentions-legales.html#cgv" class="hover:text-gray-200 transition-colors">CGV</a>
+                <a href="mailto:contact.bioparfaite@gmail.com" class="hover:text-gray-200 transition-colors">Contact</a>
             </div>
         </div>
     </footer>
@@ -662,7 +663,10 @@
         }
 
         fetch('https://ipapi.co/json/')
-            .then(r => r.json())
+            .then(r => {
+                if (!r.ok) throw new Error(r.status);
+                return r.json();
+            })
             .then(data => {
                 const region = EUR_COUNTRIES.includes(data.country_code) ? 'EUR' : 'CAD';
                 applyPricing(region);
@@ -689,7 +693,7 @@
                 <div id="chatQuestions" style="display:flex;flex-direction:column;gap:6px;"></div>
             </div>
         </div>
-        <button id="chatToggle" onclick="toggleChat()" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ff2d78,#b829dd);border:none;cursor:pointer;box-shadow:0 4px 20px rgba(255,45,120,0.4);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-top:12px;transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 30px rgba(255,45,120,0.5)'" onmouseleave="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(255,45,120,0.4)'">
+        <button id="chatToggle" onclick="toggleChat()" aria-label="Ouvrir le chat FAQ" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ff2d78,#b829dd);border:none;cursor:pointer;box-shadow:0 4px 20px rgba(255,45,120,0.4);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-top:12px;transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 30px rgba(255,45,120,0.5)'" onmouseleave="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(255,45,120,0.4)'">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         </button>
     </div>
