@@ -46,14 +46,14 @@
 - [ ] Articles blog #2 à #4 (voir calendrier de publication ci-dessous)
 - [ ] Version anglophone du site (dupliquer et traduire)
 - [ ] Nom de domaine anglophone (à choisir)
-- [ ] Page de remerciement post-paiement Stripe (redirect après paiement)
+- [x] Page de remerciement post-paiement Stripe (redirect après paiement) — `merci.html` créé
 - [x] Google Analytics GA4 (G-07K92SE02C) installé sur toutes les pages
 
 ## CONCURRENTS ANALYSÉS
 - [x] **Roast.dating** — Leader, traduit de l'anglais, CTA agressif, 84k+ clients
 - [x] **Texting Academy** — Bon contenu long-form, ton "coach séduction"
 - [x] **stat-rencontres.fr** — Générateur bio gratuit basique, site brouillon
-- [ ] **DatingZest** — Vend des numéros de téléphone pour vérification d'apps
+- [x] **DatingZest** — Vend des numéros de téléphone pour vérification d'apps. Analysé : pas pertinent pour nous, mais mots-clés SEO exploitables (articles blog)
 
 ## PHASE 2 — Offre Premium "Analyse de Profil"
 - [ ] Concept : le client upload un screenshot du profil qui l'intéresse → IA analyse photo+bio → phrases d'accroche ultra-personnalisées
@@ -239,7 +239,7 @@ Rythme recommandé : **1 article par semaine** = Google voit que le site est act
 - [ ] Intégrer les liens d'affiliation dans les articles FR et EN
 - [ ] Créer notre propre programme d'affiliation
 - [ ] Branding Stripe : ajouter logo BioParfaite + couleur accent
-- [ ] Page de remerciement post-paiement Stripe
+- [x] Page de remerciement post-paiement Stripe — `merci.html` créé
 - [x] Google Analytics GA4 (BioParfaite = G-07K92SE02C)
 - [ ] Version espagnole (futur)
 
