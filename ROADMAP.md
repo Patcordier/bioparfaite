@@ -9,6 +9,9 @@
 - [x] Géolocalisation IP : prix en $ CAD (Canada) ou € (Europe/Afrique) automatique
 - [x] Pricing psychologique : 9,97$ CAD / 9,97€
 - [x] Image Stripe générée (assets/bioparfaite-stripe-product.png)
+- [x] Favicon + icône 512px (favicon.png, icon-512.png) ajoutés sur toutes les pages
+- [x] Compression images : 6 Mo → 320 Ko (PNG → JPG optimisé 85%)
+- [x] Image OG "0 match ?" percutante + balises OG mises à jour (généraliste, pas d'appli spécifique)
 - [x] Produits Stripe créés (BioParfaite CAD + BioParfaite EUR)
 - [x] SEO : title + meta description optimisés à chaque modification
 - [x] Ordre du formulaire optimisé pour la conversion (facile → difficile → email)
@@ -42,7 +45,7 @@
 - [x] Fichier comptabilité Excel (Comptabilite_Patrix_Digital.xlsx)
 
 ## A FAIRE — Priorité moyenne
-- [ ] Branding Stripe : ajouter logo BioParfaite + couleur accent (Paramètres > Profil Stripe > Branding)
+- [x] Branding Stripe : logo BioParfaite + couleur #0a0a0f / #ff2d78 configurés
 - [ ] Articles blog #2 à #4 (voir calendrier de publication ci-dessous)
 - [ ] Version anglophone du site (dupliquer et traduire)
 - [ ] Nom de domaine anglophone (à choisir)
@@ -229,16 +232,16 @@ Rythme recommandé : **1 article par semaine** = Google voit que le site est act
 - [ ] Articles blog anglais (SEO)
 
 ### Priorité moyenne
-- [ ] Rédiger les posts promo prêts à copier-coller (voir section PROMOTION ci-dessous)
-  - [ ] 2-3 posts Reddit FR (r/france, r/AskFrance, r/Quebec)
-  - [ ] 2-3 posts Reddit EN (r/Tinder, r/dating_advice, r/Bumble)
-  - [ ] 1 article Medium FR (~1000 mots, valeur + CTA discret)
-  - [ ] 1 article Medium EN (~1000 mots, valeur + CTA discret)
-  - [ ] Calendrier de publication (quel jour, quelle plateforme)
+- [x] Rédiger les posts promo prêts à copier-coller → dossier `promo/`
+  - [x] 3 posts Reddit FR (r/france, r/AskFrance, r/Quebec) → `promo/posts-reddit-fr.md`
+  - [x] 3 posts Reddit EN (r/Tinder, r/dating_advice, r/Bumble) → `promo/posts-reddit-en.md`
+  - [x] 1 article Medium FR (~1200 mots, valeur + CTA discret) → `promo/article-medium-fr.md`
+  - [x] 1 article Medium EN (~1200 mots, valeur + CTA discret) → `promo/article-medium-en.md`
+  - [x] Calendrier de publication (3 semaines, horaires optimaux) → `promo/calendrier-publication.md`
 - [ ] S'affilier à TinderProfile.ai (30% commission, via tinderprofile.ai/affiliate/)
 - [ ] Intégrer les liens d'affiliation dans les articles FR et EN
 - [ ] Créer notre propre programme d'affiliation
-- [ ] Branding Stripe : ajouter logo BioParfaite + couleur accent
+- [x] Branding Stripe : logo + couleurs configurés
 - [x] Page de remerciement post-paiement Stripe — `merci.html` créé
 - [x] Google Analytics GA4 (BioParfaite = G-07K92SE02C)
 - [ ] Version espagnole (futur)
