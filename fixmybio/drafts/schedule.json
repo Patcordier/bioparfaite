@@ -1,0 +1,28 @@
+[
+    {
+        "date": "2026-04-16",
+        "draft": "drafts/blog-tinder-bio-women.html",
+        "target": "blog-tinder-bio-women.html",
+        "card_id": "tinder-bio-women",
+        "card_label": "Guide • Tinder",
+        "card_emoji": "👩",
+        "card_title": "Tinder Bio for Girls: 25 Irresistible Examples",
+        "card_desc": "25 bios by style. Bubbly, confident, mysterious, funny, genuine.",
+        "card_gradient": "rgba(0,212,255,0.15), rgba(255,45,120,0.15)",
+        "card_color_class": "text-neon-blue",
+        "published": false
+    },
+    {
+        "date": "2026-04-23",
+        "draft": "drafts/blog-50-tinder-openers.html",
+        "target": "blog-50-tinder-openers.html",
+        "card_id": "50-openers",
+        "card_label": "Guide • Tinder",
+        "card_emoji": "💬",
+        "card_title": "50 Tinder Openers That Actually Work",
+        "card_desc": "The best opening lines to start a real conversation.",
+        "card_gradient": "rgba(184,41,221,0.15), rgba(0,212,255,0.15)",
+        "card_color_class": "text-neon-purple",
+        "published": false
+    }
+]

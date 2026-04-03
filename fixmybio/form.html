@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Perfect Dating Bio — FixMyBio</title>
+    <meta name="description" content="Answer a few quick questions and get 5 unique dating bios plus 10 opening lines crafted for you. Secure checkout. Delivered to your email within minutes.">
+    <link rel="canonical" href="https://fixmybio.com/form.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fixmybio.com/form.html">
+    <meta property="og:title" content="Create Your Perfect Dating Bio — FixMyBio">
+    <meta property="og:description" content="Tell us about yourself in minutes. We deliver 5 bios and 10 openers to your inbox after checkout.">
+    <meta property="og:site_name" content="FixMyBio">
+    <meta property="og:image" content="https://fixmybio.com/og-fixmybio.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Create Your Perfect Dating Bio — FixMyBio">
+    <meta name="twitter:description" content="Tell us about yourself in minutes. We deliver 5 bios and 10 openers to your inbox after checkout.">
+    <meta name="twitter:image" content="https://fixmybio.com/og-fixmybio.png">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="author" content="FixMyBio">
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: {
+                            pink: '#ff2d78',
+                            purple: '#b829dd',
+                            blue: '#00d4ff',
+                        },
+                        dark: {
+                            900: '#0a0a0f',
+                            800: '#12121a',
+                            700: '#1a1a2e',
+                            600: '#252540',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(255, 45, 120, 0.3), 0 0 60px rgba(255, 45, 120, 0.1)' },
+                            '100%': { boxShadow: '0 0 30px rgba(184, 41, 221, 0.4), 0 0 80px rgba(184, 41, 221, 0.15)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <style>
+        body { background-color: #0a0a0f; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ff2d78, #b829dd, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #ff2d78, #b829dd);
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #ff4590, #c940ee);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 45, 120, 0.4), 0 0 60px rgba(184, 41, 221, 0.2);
+        }
+        .cta-btn:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .card-glow {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-bg {
+            background: radial-gradient(ellipse at 50% 0%, rgba(184, 41, 221, 0.12) 0%, rgba(10, 10, 15, 0) 60%),
+                        radial-gradient(ellipse at 20% 50%, rgba(255, 45, 120, 0.06) 0%, rgba(10, 10, 15, 0) 50%),
+                        radial-gradient(ellipse at 80% 50%, rgba(0, 212, 255, 0.06) 0%, rgba(10, 10, 15, 0) 50%);
+        }
+
+        .divider-glow {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 45, 120, 0.3), rgba(184, 41, 221, 0.3), transparent);
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #ff2d78, #b829dd, #00d4ff);
+            transition: width 0.35s ease;
+        }
+
+        .form-input {
+            background: rgba(18, 18, 26, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: rgba(255, 45, 120, 0.45);
+            box-shadow: 0 0 0 3px rgba(255, 45, 120, 0.12);
+        }
+
+        .hp-field {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-200 antialiased overflow-x-hidden min-h-screen flex flex-col">
+
+    <header>
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-xl border-b border-white/5" aria-label="Main navigation">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold tracking-tight" aria-label="FixMyBio - Home">
+                    <span class="gradient-text">FixMyBio</span><span class="text-white/60">.com</span>
+                </a>
+                <a href="index.html" class="text-sm text-gray-400 hover:text-gray-200 font-medium transition-colors">
+                    ← Back to home
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1 hero-bg pt-24 sm:pt-28 pb-16 px-4">
+        <div class="max-w-xl mx-auto">
+            <div class="text-center mb-8">
+                <p class="text-neon-pink font-semibold text-xs tracking-widest uppercase mb-2">FixMyBio questionnaire</p>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                    Create your <span class="gradient-text">perfect dating bio</span>
+                </h1>
+            </div>
+
+            <div class="card-glow rounded-2xl p-6 sm:p-8 mb-6" aria-live="polite">
+                <div class="flex items-center justify-between text-sm text-gray-400 mb-2">
+                    <span id="stepLabel">Step <span id="stepCurrent">1</span> of <span id="stepTotal">5</span></span>
+                    <span id="stepPercent" class="text-neon-blue font-semibold tabular-nums">20%</span>
+                </div>
+                <div class="h-2 rounded-full bg-dark-600 overflow-hidden border border-white/5" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" id="progressBar" aria-label="Form progress">
+                    <div id="progressFill" class="progress-fill h-full rounded-full" style="width: 20%;"></div>
+                </div>
+            </div>
+
+            <form id="fmbForm" class="card-glow rounded-2xl p-6 sm:p-8" novalidate>
+                <div class="hp-field" aria-hidden="true">
+                    <label for="website">Leave empty</label>
+                    <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value="">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="form-step" data-step="1">
+                    <label for="firstName" class="block text-lg font-bold text-white mb-2">What's your first name?</label>
+                    <p class="text-gray-500 text-sm mb-4">We use this to personalize your bios.</p>
+                    <input type="text" name="firstName" id="firstName" required maxlength="80"
+                           class="form-input w-full rounded-xl px-4 py-3 text-white placeholder-gray-500"
+                           placeholder="Alex" autocomplete="given-name">
+                    <p class="text-red-400 text-sm mt-2 hidden" id="err-firstName" role="alert"></p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="form-step hidden" data-step="2">
+                    <label for="country" class="block text-lg font-bold text-white mb-2">Where are you based?</label>
+                    <p class="text-gray-500 text-sm mb-4">Helps us match tone and spelling.</p>
+                    <select name="country" id="country" required
+                            class="form-input w-full rounded-xl px-4 py-3 text-white bg-dark-800">
+                        <option value="">Select your country</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <p class="text-red-400 text-sm mt-2 hidden" id="err-country" role="alert"></p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="form-step hidden" data-step="3">
+                    <label for="currentBio" class="block text-lg font-bold text-white mb-2">Paste your current bio (or describe yourself in a few words)</label>
+                    <p class="text-gray-500 text-sm mb-4">Optional — skip if you are starting from scratch.</p>
+                    <textarea name="currentBio" id="currentBio" rows="5"
+                              class="form-input w-full rounded-xl px-4 py-3 text-white placeholder-gray-500 resize-y min-h-[120px]"
+                              placeholder="Leave blank if you don't have one yet"></textarea>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="form-step hidden" data-step="4">
+                    <label for="passions" class="block text-lg font-bold text-white mb-2">What are your passions, hobbies, or fun facts about you?</label>
+                    <p class="text-gray-500 text-sm mb-4">The more personality, the better your lines.</p>
+                    <textarea name="passions" id="passions" required rows="5"
+                              class="form-input w-full rounded-xl px-4 py-3 text-white placeholder-gray-500 resize-y min-h-[120px]"
+                              placeholder="e.g., I make killer tacos, I've been to 12 countries, I laugh at my own jokes..."></textarea>
+                    <p class="text-red-400 text-sm mt-2 hidden" id="err-passions" role="alert"></p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="form-step hidden" data-step="5">
+                    <label for="email" class="block text-lg font-bold text-white mb-2">Where should we send your bios?</label>
+                    <p class="text-gray-500 text-sm mb-4">Same email you will use at checkout.</p>
+                    <input type="email" name="email" id="email" required
+                           class="form-input w-full rounded-xl px-4 py-3 text-white placeholder-gray-500"
+                           placeholder="you@example.com" autocomplete="email">
+                    <p class="text-red-400 text-sm mt-2 hidden" id="err-email" role="alert"></p>
+
+                    <div class="mt-6 p-4 rounded-xl bg-dark-800/80 border border-white/10">
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            By proceeding, you acknowledge this is an instant digital product. Your 5 unique bios + 10 opening lines will be delivered to your email within minutes.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-red-400 text-sm mt-4 hidden" id="err-global" role="alert"></p>
+                <p class="text-amber-400 text-sm mt-4 hidden" id="err-rate" role="alert"></p>
+
+                <div class="flex flex-col-reverse sm:flex-row gap-3 mt-8 sm:justify-between sm:items-center">
+                    <button type="button" id="btnPrev"
+                            class="hidden w-full sm:w-auto px-6 py-3 rounded-xl border border-white/15 text-gray-300 font-semibold hover:bg-white/5 hover:text-white transition-colors">
+                        Previous
+                    </button>
+                    <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto sm:ml-auto">
+                        <button type="button" id="btnNext"
+                                class="cta-btn w-full sm:w-auto text-white font-bold px-8 py-3.5 rounded-full animate-glow">
+                            Next
+                        </button>
+                        <button type="submit" id="btnSubmit"
+                                class="hidden cta-btn w-full sm:w-auto text-white font-bold px-8 py-3.5 rounded-full animate-glow">
+                            Get My Bios — <span id="submitPrice">$9.97</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div class="divider-glow max-w-xl mx-auto px-4"></div>
+
+    <footer class="border-t border-white/5 py-10 px-4 mt-auto">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid sm:grid-cols-2 gap-8 text-sm">
+                <div>
+                    <p class="text-white font-semibold mb-3">Blog</p>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="blog-tinder-bio-men.html" class="text-gray-400 hover:text-gray-200 transition-colors">Tinder Bio for Guys: 30 examples</a>
+                        </li>
+                        <li>
+                            <span class="text-gray-500">More articles coming soon</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-white font-semibold mb-3">Site</p>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-gray-200 transition-colors">Home</a></li>
+                        <li><a href="legal.html" class="text-gray-400 hover:text-gray-200 transition-colors">Privacy</a></li>
+                        <li><a href="legal.html#terms" class="text-gray-400 hover:text-gray-200 transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-xs text-gray-500 mt-8">&copy; 2026 <span class="gradient-text font-semibold">FixMyBio.com</span></p>
+        </div>
+    </footer>
+
+    <script>
+(function () {
+    const TOTAL_STEPS = 5;
+    const WEBHOOK_URL = 'WEBHOOK_URL_PLACEHOLDER';
+    const FMB_TOKEN = 'TOKEN_PLACEHOLDER';
+    const DEFAULT_STRIPE = 'STRIPE_LINK_USD';
+    const RATE_KEY = 'fmb_last_submit';
+    const RATE_MS = 60000;
+
+    const PRICING = {
+        USD: '$9.97',
+        CAD: '$9.97 CAD',
+        GBP: '£7.97',
+        AUD: '$14.97 AUD',
+        EUR: '€9.97'
+    };
+
+    const GBP_COUNTRIES = ['GB'];
+    const AUD_COUNTRIES = ['AU', 'NZ'];
+    const CAD_COUNTRIES = ['CA'];
+    const EUR_COUNTRIES = ['FR','DE','ES','IT','NL','BE','AT','PT','IE','FI','GR','LU'];
+
+    function resolveRegion(countryCode) {
+        if (!countryCode) return 'USD';
+        const cc = String(countryCode).toUpperCase();
+        if (GBP_COUNTRIES.includes(cc)) return 'GBP';
+        if (AUD_COUNTRIES.includes(cc)) return 'AUD';
+        if (CAD_COUNTRIES.includes(cc)) return 'CAD';
+        if (EUR_COUNTRIES.includes(cc)) return 'EUR';
+        return 'USD';
+    }
+
+    function applyPriceFromRegion(region) {
+        const label = PRICING[region] || PRICING.USD;
+        localStorage.setItem('fmb_price_display', label);
+        const el = document.getElementById('submitPrice');
+        if (el) el.textContent = label;
+    }
+
+    function initPrice() {
+        const stored = localStorage.getItem('fmb_price_display');
+        const region = localStorage.getItem('fmb_region');
+        if (stored) {
+            document.getElementById('submitPrice').textContent = stored;
+        } else if (region && PRICING[region]) {
+            applyPriceFromRegion(region);
+        } else {
+            fetch('https://ipapi.co/json/')
+                .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+                .then(function (data) {
+                    var reg = resolveRegion(data.country_code);
+                    localStorage.setItem('fmb_region', reg);
+                    applyPriceFromRegion(reg);
+                })
+                .catch(function () {
+                    applyPriceFromRegion('USD');
+                });
+        }
+    }
+
+    var currentStep = 1;
+    var form = document.getElementById('fmbForm');
+    var btnNext = document.getElementById('btnNext');
+    var btnPrev = document.getElementById('btnPrev');
+    var btnSubmit = document.getElementById('btnSubmit');
+    var progressFill = document.getElementById('progressFill');
+    var progressBar = document.getElementById('progressBar');
+    var stepCurrent = document.getElementById('stepCurrent');
+    var stepPercent = document.getElementById('stepPercent');
+
+    function showStep(n) {
+        document.querySelectorAll('.form-step').forEach(function (panel) {
+            var s = parseInt(panel.getAttribute('data-step'), 10);
+            panel.classList.toggle('hidden', s !== n);
+        });
+        stepCurrent.textContent = String(n);
+        var pct = Math.round((n / TOTAL_STEPS) * 100);
+        stepPercent.textContent = pct + '%';
+        progressFill.style.width = pct + '%';
+        progressBar.setAttribute('aria-valuenow', String(n));
+
+        btnPrev.classList.toggle('hidden', n === 1);
+        btnNext.classList.toggle('hidden', n === TOTAL_STEPS);
+        btnSubmit.classList.toggle('hidden', n !== TOTAL_STEPS);
+
+        clearErrors();
+    }
+
+    function clearErrors() {
+        ['err-firstName','err-country','err-passions','err-email','err-global','err-rate'].forEach(function (id) {
+            var e = document.getElementById(id);
+            if (e) { e.textContent = ''; e.classList.add('hidden'); }
+        });
+    }
+
+    function validateStep(n) {
+        clearErrors();
+        if (n === 1) {
+            var fn = document.getElementById('firstName').value.trim();
+            if (!fn) {
+                var el = document.getElementById('err-firstName');
+                el.textContent = 'Please enter your first name.';
+                el.classList.remove('hidden');
+                return false;
+            }
+        }
+        if (n === 2) {
+            if (!document.getElementById('country').value) {
+                var ec = document.getElementById('err-country');
+                ec.textContent = 'Please select your country.';
+                ec.classList.remove('hidden');
+                return false;
+            }
+        }
+        if (n === 4) {
+            var p = document.getElementById('passions').value.trim();
+            if (!p) {
+                var ep = document.getElementById('err-passions');
+                ep.textContent = 'Tell us at least a little about your passions or hobbies.';
+                ep.classList.remove('hidden');
+                return false;
+            }
+        }
+        if (n === 5) {
+            var em = document.getElementById('email');
+            if (!em.value.trim() || !em.checkValidity()) {
+                var ee = document.getElementById('err-email');
+                ee.textContent = 'Please enter a valid email address.';
+                ee.classList.remove('hidden');
+                return false;
+            }
+        }
+        return true;
+    }
+
+    btnNext.addEventListener('click', function () {
+        if (!validateStep(currentStep)) return;
+        if (currentStep < TOTAL_STEPS) {
+            currentStep++;
+            showStep(currentStep);
+        }
+    });
+
+    btnPrev.addEventListener('click', function () {
+        if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    });
+
+    function checkRateLimit() {
+        var last = localStorage.getItem(RATE_KEY);
+        if (!last) return true;
+        var t = parseInt(last, 10);
+        if (isNaN(t)) return true;
+        return (Date.now() - t) >= RATE_MS;
+    }
+
+    form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var rateEl = document.getElementById('err-rate');
+        rateEl.classList.add('hidden');
+
+        if (document.getElementById('website').value !== '') {
+            return;
+        }
+
+        if (!validateStep(5)) {
+            currentStep = 5;
+            showStep(5);
+            return;
+        }
+
+        if (!checkRateLimit()) {
+            var wait = RATE_MS - (Date.now() - parseInt(localStorage.getItem(RATE_KEY), 10));
+            var sec = Math.ceil(wait / 1000);
+            rateEl.textContent = 'Please wait ' + sec + ' second' + (sec !== 1 ? 's' : '') + ' before submitting again.';
+            rateEl.classList.remove('hidden');
+            return;
+        }
+
+        var payload = {
+            firstName: document.getElementById('firstName').value.trim(),
+            country: document.getElementById('country').value,
+            currentBio: document.getElementById('currentBio').value.trim(),
+            passions: document.getElementById('passions').value.trim(),
+            email: document.getElementById('email').value.trim()
+        };
+
+        btnSubmit.disabled = true;
+        btnPrev.disabled = true;
+
+        fetch(WEBHOOK_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-FMB-Token': FMB_TOKEN
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(function (res) {
+                if (!res.ok) throw new Error('Request failed: ' + res.status);
+                localStorage.setItem(RATE_KEY, String(Date.now()));
+                var link = localStorage.getItem('fmb_stripe_link') || DEFAULT_STRIPE;
+                window.location.href = link;
+            })
+            .catch(function () {
+                var g = document.getElementById('err-global');
+                g.textContent = 'Something went wrong. Please check your connection and try again.';
+                g.classList.remove('hidden');
+                btnSubmit.disabled = false;
+                btnPrev.disabled = false;
+            });
+    });
+
+    initPrice();
+    showStep(1);
+})();
+    </script>
+</body>
+</html>

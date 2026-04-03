@@ -47,7 +47,7 @@
 - [ ] Version anglophone du site (dupliquer et traduire)
 - [ ] Nom de domaine anglophone (à choisir)
 - [ ] Page de remerciement post-paiement Stripe (redirect après paiement)
-- [ ] Google Analytics pour suivre les visites
+- [x] Google Analytics GA4 (G-07K92SE02C) installé sur toutes les pages
 
 ## CONCURRENTS ANALYSÉS
 - [x] **Roast.dating** — Leader, traduit de l'anglais, CTA agressif, 84k+ clients
@@ -216,6 +216,258 @@ Rythme recommandé : **1 article par semaine** = Google voit que le site est act
 - 3 exemples gratuits par style + blur sur le reste (conversion)
 - Données chiffrées quand possible (taux de réponse, statistiques)
 - PAS de commentaires publics (risque d'avis négatifs)
+
+---
+
+## TÂCHES EN ATTENTE
+
+### Priorité haute
+- [ ] Configurer DNS FixMyBio.com (A + AAAA + CNAME www)
+- [ ] Créer le site anglais FixMyBio.com (dupliquer et adapter BioParfaite)
+- [ ] Nouveaux liens Stripe USD / GBP / AUD
+- [ ] Adapter le prompt Claude pour générer en anglais
+- [ ] Articles blog anglais (SEO)
+
+### Priorité moyenne
+- [ ] Rédiger les posts promo prêts à copier-coller (voir section PROMOTION ci-dessous)
+  - [ ] 2-3 posts Reddit FR (r/france, r/AskFrance, r/Quebec)
+  - [ ] 2-3 posts Reddit EN (r/Tinder, r/dating_advice, r/Bumble)
+  - [ ] 1 article Medium FR (~1000 mots, valeur + CTA discret)
+  - [ ] 1 article Medium EN (~1000 mots, valeur + CTA discret)
+  - [ ] Calendrier de publication (quel jour, quelle plateforme)
+- [ ] S'affilier à TinderProfile.ai (30% commission, via tinderprofile.ai/affiliate/)
+- [ ] Intégrer les liens d'affiliation dans les articles FR et EN
+- [ ] Créer notre propre programme d'affiliation
+- [ ] Branding Stripe : ajouter logo BioParfaite + couleur accent
+- [ ] Page de remerciement post-paiement Stripe
+- [x] Google Analytics GA4 (BioParfaite = G-07K92SE02C)
+- [ ] Version espagnole (futur)
+
+### Priorité basse
+- [ ] Phase 2 — Offre Premium "Analyse de Profil" (screenshot → phrases personnalisées)
+- [ ] Système de build Tailwind (remplacer CDN par CSS compilé)
+- [ ] Témoignages réels (remplacer les fictifs quand vrais clients)
+- [ ] A/B testing prix
+- [ ] Codes promo Stripe
+
+---
+
+## PLAN DE PROMOTION — Organique + Payant
+
+### Organique GRATUIT (par ordre de priorité)
+
+#### 1. SEO — Blog (déjà en cours) ★★★★★
+- 1 article/semaine par site (FR + EN) = 24 articles/an/site
+- Résultats visibles : 2-3 mois, plein effet 6-12 mois
+- Chaque article ramène du trafic indéfiniment (effet cumulé)
+- Cibler les mots-clés longue traîne KD < 25 (voir SEO_BIBLE.md)
+
+#### 2. TikTok / Instagram Reels ★★★★★
+- Format : "Je réécris ta bio Tinder en 30 secondes" (avant/après)
+- Vidéos 15-60 secondes, face caméra ou texte animé
+- 3-5 vidéos/semaine minimum
+- Lien en bio vers BioParfaite.com / FixMyBio.com (via Linktree)
+- MEILLEUR canal gratuit en 2026 : 1 vidéo virale = des milliers de visiteurs
+- Hashtags : #tinder #datingtips #tinderprofile #biotinder #matchs
+
+#### 3. Reddit ★★★★☆
+- Subreddits EN : r/Tinder (1.3M), r/Bumble, r/dating_advice, r/hingeapp, r/OnlineDating
+- Subreddits FR : r/france, r/AskFrance, r/Quebec
+- Stratégie : 2 semaines de karma building (répondre, aider) → partager articles naturellement
+- NE JAMAIS faire de pub directe = ban immédiat
+- Reddit est cité par Google et par les IA (ChatGPT, Gemini) → visibilité SEO indirecte
+
+#### 4. Pinterest ★★★☆☆
+- Infographies : "50 idées de bio Tinder", "Phrases d'accroche qui marchent"
+- Trafic stable et long terme (comme le SEO)
+- Public majoritairement féminin → articles "bio femme"
+- Chaque pin = lien vers article de blog
+
+#### 5. Quora / Forums ★★☆☆☆
+- Répondre aux questions avec un lien vers l'article
+- Peu d'effort, trafic régulier mais faible
+
+### Publicité PAYANTE (si budget disponible)
+
+| Plateforme | Budget min./mois | ROI attendu | Avantage | Inconvénient |
+|---|---|---|---|---|
+| **Google Ads** | 150-300€ | Élevé | Intent d'achat direct ("générateur bio tinder") | CPC potentiellement élevé |
+| **TikTok Ads** | 50-200€ | Moyen-Élevé | CPM très bas, ciblage 18-35 ans | Conversion moins directe |
+| **Meta Ads (FB/IG)** | 100-300€ | Moyen | Ciblage précis (intérêts dating) | Restrictions contenu dating |
+| **Reddit Ads** | 50-150€ | Moyen | Audience ciblée par subreddit | Volume limité |
+
+> Recommandation : commencer par Google Ads (mots-clés à forte intention) quand les premières ventes organiques sont confirmées.
+
+---
+
+## PROGRESSION SEO — Comment le site prend de la valeur
+
+### Mois par mois (Domain Authority & trafic)
+| Période | Domain Authority (DA) | Trafic organique estimé | Ce qui se passe |
+|---|---|---|---|
+| **Mois 0-1** (maintenant) | DA 1-5 | 0-50/mois | Google indexe les pages, "sandbox" |
+| **Mois 2-3** | DA 5-10 | 50-500/mois | Premiers articles référencés en page 3-5 |
+| **Mois 4-6** | DA 10-15 | 500-2 000/mois | Articles longue traîne atteignent page 1-2 |
+| **Mois 7-12** | DA 15-25 | 2 000-8 000/mois | Mots-clés moyens en page 1, effet cumulé |
+| **Année 2** | DA 25-40 | 8 000-30 000/mois | Autorité établie, concurrence avec les moyens |
+| **Année 3+** | DA 40+ | 30 000+/mois | Trafic stable, mots-clés compétitifs accessibles |
+
+### Ce qui fait monter le DA (Domain Authority)
+1. **Âge du domaine** — Google fait davantage confiance aux domaines anciens (patience)
+2. **Backlinks** — Chaque site qui pointe vers toi = un "vote" (les articles Reddit/forums comptent)
+3. **Contenu régulier** — 1 article/semaine montre que le site est actif et sérieux
+4. **Trafic utilisateur** — Plus de visiteurs = signaux positifs (temps passé, pages vues)
+5. **Maillage interne** — Plus d'articles = plus de liens internes = meilleur référencement global
+
+### Effet composé du SEO (exponentiel, pas linéaire)
+- Article 1 seul → trafic limité
+- 10 articles → chacun pousse les autres (maillage interne)
+- 25 articles → Google considère le site comme "expert du sujet" (Topical Authority)
+- 50+ articles → le site se positionne même sur des mots-clés non ciblés directement
+
+---
+
+## PROJECTIONS FINANCIÈRES — Année 1
+
+### Hypothèses
+- Prix : 9,97€/CAD par vente | Coût API : ~0,05$ | Marge nette : ~95%
+- Coûts fixes : ~30$/an (2 domaines) | Hébergement : 0$ (GitHub Pages)
+
+### Scénario Réaliste Moyen (SEO + contenu social, 2 sites FR/EN)
+| Période | Trafic/mois (2 sites) | Taux conversion | Ventes/mois | CA mensuel |
+|---|---|---|---|---|
+| Mois 1-3 | 200-1 000 | 1.5% | 3-15 | 30-150€ |
+| Mois 4-6 | 1 000-5 000 | 2% | 20-100 | 200-1 000€ |
+| Mois 7-12 | 5 000-15 000 | 2.5% | 125-375 | 1 250-3 740€ |
+| **Total Année 1** | | | **~700-2 500 ventes** | **~7 000-25 000€ net** |
+
+> Ces projections supposent : publication régulière (1 article/semaine), présence sur TikTok/Reddit, 2 sites actifs. Sans promotion sociale, diviser par 2-3.
+
+---
+
+## PHASE 3 — PROJET ASTROLOGIE IA (après FixMyBio + version ES)
+
+> Ne pas démarrer avant que les sites rencontre FR + EN tournent et génèrent des ventes (minimum 3-6 mois).
+> Infrastructure identique : site statique + formulaire + N8N + Claude + Stripe + GitHub Pages.
+
+### Le marché
+- Marché mondial astrologie 2026 : **17.7 milliards $** (croissance 20%/an)
+- 80% des millennials/Gen Z consultent l'astrologie régulièrement
+- Prix moyen d'une consultation astrologue : **100-300$**
+- Concurrents IA (Arcanavana, AstroChart.ai, XORD) → surtout des abonnements mensuels
+- **Très peu de concurrence IA en français** → même avantage que BioParfaite
+
+### Positionnement — NE PAS juste vendre de l'astrologie
+
+Le problème des concurrents : ils vendent un "thème astral" = un produit générique.
+Les gens n'achètent pas un thème astral, ils achètent une **réponse à un problème**.
+
+#### Angles de positionnement possibles (à valider)
+
+| Angle | Problème résolu | Cible | Prix potentiel | Potentiel |
+|---|---|---|---|---|
+| **"Guide de vie astral"** | "Je suis perdu(e), je ne sais pas quoi faire" | 25-40 ans en transition de vie | 29.97-49.97$ | ★★★★★ |
+| **Compatibilité amoureuse** | "Est-ce que cette personne est faite pour moi ?" | Couples, célibataires | 19.97-29.97$ | ★★★★★ |
+| **Astro-carrière** | "Quel métier me correspond vraiment ?" | Étudiants, reconversion pro | 24.97-39.97$ | ★★★★☆ |
+| **Thème astral bébé/enfant** | "Comment élever mon enfant selon sa personnalité ?" | Parents (marché émotionnel) | 29.97-39.97$ | ★★★★☆ |
+| **Prévisions annuelles** | "À quoi ressemble mon année 2027 ?" | Tout le monde (récurrence annuelle) | 14.97-24.97$ | ★★★★☆ |
+| **Astro-séduction** | "Comment séduire selon mon signe ?" → pont avec BioParfaite | Célibataires | 14.97$ | ★★★☆☆ |
+
+#### Idées de différenciation
+- **Pack multi-lecture** : thème natal + compatibilité + prévisions = 49.97-69.97$ (up-sell)
+- **Format visuel** : PDF premium illustré avec carte du ciel personnalisée (pas juste du texte email)
+- **Pont avec BioParfaite** : après le thème astral → "Découvre aussi ta bio idéale selon ton signe" (cross-sell)
+- **Contenu blog SEO** : "Compatibilité Bélier-Scorpion", "Horoscope 2027 Gémeaux" → mots-clés longue traîne infinis (12 signes × 12 combinaisons = 144 articles de compatibilité)
+- **Saisonnalité** : pics de ventes au Nouvel An (bonnes résolutions), Saint-Valentin (compatibilité), rentrée (carrière)
+- **Langue** : FR d'abord (quasi aucun concurrent IA), puis EN + ES
+
+#### APIs astronomiques — Données planétaires en temps réel
+Les positions planétaires sont des données astronomiques réelles (pas inventées). Des APIs fournissent ces calculs :
+
+| API | Données fournies | Prix |
+|---|---|---|
+| **Swiss Ephemeris** | Positions planétaires ultra-précises (référence NASA) | Open source / gratuit |
+| **AstrologyAPI.com** | Thème natal, transits, compatibilité, prédictions | ~20$/mois |
+| **Prokerala Astrology API** | Thème natal, horoscope, compatibilité | Gratuit (limité) puis payant |
+| **Aztro API** | Horoscope quotidien par signe (basique) | Gratuit |
+
+**Workflow avec données réelles :**
+```
+Swiss Ephemeris (positions planétaires du jour/semaine)
+         ↓
+Thème natal du client (date + heure + lieu de naissance → stocké)
+         ↓
+Claude reçoit les transits de la semaine + thème natal
+         ↓
+Interprétation personnalisée unique (différente chaque semaine)
+         ↓
+Email automatique (N8N) ou PDF
+```
+
+#### Modèle de revenus — Abonnement récurrent (game changer)
+Contrairement à BioParfaite (achat unique), l'astrologie permet un modèle **par abonnement** :
+
+| Offre | Prix | Livrable | Récurrence |
+|---|---|---|---|
+| Thème natal complet | 29.97-49.97$ | PDF 15-20 pages illustré | One-shot |
+| Compatibilité détaillée | 29.97$ | PDF 2 personnes, thèmes croisés | One-shot |
+| Horoscope perso hebdo | 4.97$/mois | Email chaque lundi, transits réels | Abonnement |
+| Pack Premium | 9.97$/mois | Hebdo + alertes transits majeurs + conseils | Abonnement |
+| Prévisions annuelles | 19.97$ | PDF année complète | Annuel (récurrent) |
+
+**Projections abonnement :**
+- 100 abonnés × 9.97$/mois = 997$/mois
+- 500 abonnés × 9.97$/mois = **4 985$/mois** (~60 000$/an)
+- 1 000 abonnés × 9.97$/mois = **9 970$/mois** (~120 000$/an)
+- Coût API + Claude par abonné : ~0.10-0.20$/semaine → marge ~95%
+
+#### Concurrents analysés (astrologie)
+
+| Site | Modèle | Points forts | Points faibles |
+|---|---|---|---|
+| **ShivShakti.fr** | Contenu astro SEO → vend des bracelets (39-49€) | Contenu long, Google Ads actif | Design basique, contenu recyclé, pas personnalisé |
+| **Astrologie.fr** | Portail classique → consultation téléphonique (3.5-9.5€/min) | Gros DA, thème natal gratuit | Design daté, pas de produit digital, modèle ancien |
+| **Arcanavana** | App IA multi-traditions | 4 systèmes (Western, Vedic, BaZi, Chinese) | 24.99$/mois cher, pas de contenu SEO |
+| **AstroChart.ai** | App IA multilingue | Multi-langues, interface propre | Pas de blog SEO, pas de PDF |
+| **Co-Star** (app) | App mobile gratuite + premium | Millions d'utilisateurs, beau design | App seulement, pas de site web SEO |
+| **The Pattern** (app) | App mobile IA | UX moderne, social features | App seulement, anglais uniquement |
+
+**Avantage clé** : aucun de ces concurrents ne combine contenu SEO massif (144+ articles) + produit personnalisé par données planétaires réelles + design moderne + prix accessible. En français, le marché est quasi vide.
+
+#### SEO Astrologie — La mine d'or de contenu
+| Type de contenu | Nombre d'articles | Exemple | Volume recherche |
+|---|---|---|---|
+| Compatibilité signe×signe | **144 articles** | "Compatibilité Bélier Scorpion" | 1 000-10 000/mois chacun |
+| Horoscope mensuel par signe | **144/an** (12×12 mois) | "Horoscope Gémeaux juin 2027" | 5 000-20 000/mois |
+| Personnalité par signe | **12 articles** | "Personnalité Balance" | 3 000-8 000/mois |
+| Ascendant par signe | **12 articles** | "Ascendant Vierge signification" | 2 000-5 000/mois |
+| Signe lunaire | **12 articles** | "Lune en Scorpion" | 1 000-3 000/mois |
+| **Total potentiel** | **300+ articles** la première année | | |
+
+> Avec 300 articles ciblant chacun un mot-clé à 1 000-10 000 recherches/mois, le trafic total pourrait atteindre **50 000-200 000 visiteurs/mois** à maturité. Même avec 1% de conversion en abonnement, ça donne 500-2 000 abonnés.
+
+#### Ce qu'il faudra produire
+- [ ] Recherche de noms de domaine (.com) — idées : AstroGuide, MonCielAstral, etc.
+- [ ] Recherche mots-clés astrologie FR + EN (voir format SEO_BIBLE.md)
+- [ ] Analyse concurrents approfondie (Co-Star, The Pattern, apps)
+- [ ] Tester Swiss Ephemeris / AstrologyAPI → vérifier les données
+- [ ] Prompt Claude spécialisé astrologie (données astronomiques + interprétation créative)
+- [ ] Landing page + formulaire (date/heure/lieu de naissance) — design dark/neon comme BioParfaite
+- [ ] Système de génération PDF illustré (carte du ciel + rapport)
+- [ ] Produits Stripe (one-shot + abonnement mensuel)
+- [ ] Workflow N8N (one-shot + cron hebdomadaire pour abonnés)
+- [ ] 12 articles de base (1 par signe)
+- [ ] 144 articles de compatibilité (production semi-automatisée avec Claude)
+- [ ] Pages légales
+- [ ] Configuration Stripe pour paiements récurrents (abonnements)
+
+#### Autres idées de business IA (même modèle, pour plus tard)
+| Idée | Cible | Prix | Potentiel |
+|---|---|---|---|
+| Lettre de motivation IA | Chercheurs d'emploi | 9.97-14.97$ | ★★★★☆ |
+| Bio LinkedIn IA | Professionnels | 14.97$ | ★★★★☆ |
+| Discours de mariage IA | Mariés/témoins | 14.97-24.97$ | ★★★☆☆ |
+| Description Airbnb IA | Propriétaires | 14.97-29.97$ | ★★★☆☆ |
 
 ---
 
