@@ -3,5 +3,6 @@ Allow: /
 Disallow: /ROADMAP.md
 Disallow: /PROMPT_CLAUDE.md
 Disallow: /drafts/
+Disallow: /SEO_BIBLE.md
 
 Sitemap: https://bioparfaite.com/sitemap.xml
